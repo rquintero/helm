@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ngnix
+  name: nginx
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: ngnix 
+      app: nginx 
   template:
     metadata:
       labels:
-        app: ngnix
+        app: nginx
     spec:
       containers:
-      - name: ngnix
+      - name: nginx
         image: arm32v7/nginx
         ports:
         - containerPort: 80
