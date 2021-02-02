@@ -4,7 +4,7 @@ metadata:
   name: ngnix
 spec:
   selector:
-    app: nginx
+    app: ngnix
   ports:
   - name: main
     protocol: TCP
