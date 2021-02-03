@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: {{.Values.service.name}}
 spec:
   selector:
-    app: nginx
+    app: {{.Values.mainLabel}}
   ports:
   - name: main
     protocol: TCP
-    port: 80
+    port: {{.Values.service.externalPort}}
     targetPort: 80
